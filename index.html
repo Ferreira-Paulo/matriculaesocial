@@ -4,71 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alterar Matricula eSocial</title>
-  <link rel="stylesheet" href="script.js">
-  <style>
-    @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
-    :root {
-      --color-green: #29503c;
-      --color-gray: #bdbec0;
-    }
-    * {
-      border: 0%;
-      padding: 0%;
-      margin: 0%;
-      font-size: 15px;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-    body {
-      background: var(--color-gray);
-      margin-top: 5vw;
-    }
-    .div {
-      margin: 10px auto;
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-    }
-    .led {
-      
-    }
-    p {
-      margin: 10px 10px 0 20px;
-      font-weight: bolder;
-      color: var(--color-green);
-    }
-    .box {
-      border: solid var(--color-green);
-    }
-    .cod {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      color: var(--color-green);
-    }
-    .text {
-      margin: 0 10px 10px ;
-      background: whitesmoke;
-    }
-    .text::placeholder {
-      color: var(--color-green);
-      font-size: 12px;
-    }
-    .button {
-      margin-left: 25%;
-      width: 50%;
-      color: var(--color-green);
-    }
-    #res{
-      margin-top: 10px;
-      text-align: center;
-      font-size: 20px;
-      color: var(--color-green);
-    }
-  </style>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="div">
     <span></span>
-
+    
     <span class="box">
       <span class="cod">
         <p>Matricula Portal</p>   <p>Código Funcionario Ledwin</p>
@@ -84,29 +26,5 @@
     </span>
 
   </div>
-  
-
-  <script>
-    function gerar() {
-      res.innerHTML = "Comando:"
-
-      var m = document.getElementById('matri').value //pega a matricula
-      var teste = m.split(" ") //separa cada matricula por espaço
-      var filtered_matri = teste.filter(function (el) { //limpa os arrays que estão vazios
-        return el != "";
-      });
-
-      var f = document.getElementById('funci').value //pega a matricula
-      var teste = f.split(" ") //separa cada matricula por espaço
-      var filtered_funci = teste.filter(function (el) { //limpa os arrays que estão vazios
-        return el != "";
-      });
-      
-      for (i=0;filtered_matri[i] || filtered_funci[i];i++) {
-        res.innerHTML += "<br>" + `update funci set matriculaESOCIAL = '${filtered_matri[i]}' where xcodfunc = '${filtered_funci[i]}'`
-      }
-    }
-
-  </script>
 </body>
 </html>
