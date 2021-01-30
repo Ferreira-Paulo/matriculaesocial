@@ -19,6 +19,6 @@ function gerar() {
   });
   
   for (i=0;filtered_matri[i] || filtered_funci[i];i++) {
-    res.innerHTML += "<br>" + `update funci set matriculaESOCIAL = '${filtered_matri[i]}' where xcodfunc = '${filtered_funci[i]}'`
+    res.innerHTML += "<br>" + `update funci set matriculaESOCIAL = '${filtered_matri[i]}' where xcodfunc = '${filtered_funci[i]}';`
   }
 }
